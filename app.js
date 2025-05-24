@@ -30,7 +30,7 @@ app.get('/', (req, res) => {
 
 
 async function connect(){
-    connectingdb(); // Initialize database connection
+   await  connectingdb(); // Initialize database connection
 
     app.listen(3000, () => {
     console.log('Server is running on port 3000');

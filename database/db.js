@@ -1,8 +1,10 @@
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+import process from 'node:process';
 
-
+dotenv.config();
 async function connectingdb(){
-    await mongoose.connect('mongodb+srv://aryanisok:aryanisok@aryandb.ducqf1e.mongodb.net/subscription-api');
+    await mongoose.connect(process.env.MONGODB_URI);
     console.log('Database connected successfully');
 }
 
